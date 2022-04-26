@@ -1,3 +1,4 @@
+/* GLOBAL */
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -10,6 +11,55 @@ a, a:hover, a:focus, a:active {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* HEADER */
+.header {
+    background: rgb(187, 187, 233);
+}
+
+.quickBar {
+    display: grid;
+    grid-template-columns: 50px 1fr 400px;
+    height: 50px;
+    margin: 0px 100px;
+    column-gap: 10px;
+}
+
+.logo,
+.search,
+.shortcuts {
+    border: blue dotted 2px;
+}
+
+.searchBar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 5px
+}
+
+.typeHere {
+    border: black solid 2px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.shortcuts {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+}
+
+.shortHome,
+.shortNetwork,
+.shortJobs,
+.shortMessaging,
+.shortNotifications,
+.shortProfile,
+.shortWork,
+.shortPostJob {
+    border: green dotted 2px;
+}
+
+/* HEADER ENDS */
+
 /* GRID 3x1 */
 .container {
 Display: grid;
@@ -19,23 +69,72 @@ Grid-template:
 
 height: 100vh;
 grid-gap:5px;
-margin: 0px 100px;
-border: black solid 2px;
+margin: 10px 100px;
 }
 
+/* PROFILE */
 .profile {
     grid-area: profile;
     background: rgb(204, 239, 135);
+
+    display: grid;
+    grid-template:
+    "myItems" 300px
+    "analytics" 150px
+    "history" 400px /
+    1fr;
+
+    grid-gap: 2px;
 }
 
+   
+.myItems {
+    grid-area: myItems;
+    border: black dashed 2px;
+
+    display: grid;
+    grid-template-rows: 2fr repeat(3, 1fr);
+}
+
+.profilePicture,
+.views,
+.premium,
+.items {
+    border: green dotted 2px;
+    margin: 2px;
+}
+
+.analytics {
+    grid-area: analytics;
+    border: black dashed 2px;
+}
+
+.history {
+    grid-area: history;
+    border: black dashed 2px;
+}
+/* PROFILE ENDS */
+
+/* FEED */
 .feed {
-    grid-area: feed;
     background: rgb(230, 134, 134);
+    display: grid;
+    grid-template:
+    "newPost" 100px
+    "timeline" 1fr /
+    1fr;
+
+    grid-gap: 2px;
+
+    grid-area: feed;
+    border: black dashed 2px;
 }
 
 .newPost {
     display: grid;
     grid-template-rows: 3fr 2fr;
+    grid-area: newPost;
+    border: black dashed 2px;
 }
 
 .postBar, .attachment {
@@ -77,64 +176,38 @@ border: black solid 2px;
     border: green dotted 2px;
 }
 
+.timeline {
+    display: grid;
+    grid-template-rows: repeat(3, 400px);
+    margin: 2px;
+    row-gap: 2px;
+}
+
+.story {
+    border: green dotted 2px;
+
+}
+
+/* FEED ENDS */
+
+/* SUGGESTIONS */
 .suggestions {
     grid-area: suggestions;
     background: rgb(240, 240, 140);
-}
 
-.profile {
     display: grid;
-    grid-template:
-    "myItems" 300px
-    "analytics" 150px
-    "history" 1fr /
-    1fr;
-
-    grid-gap: 2px;
-}
-    
-.myItems {
-    grid-area: myItems;
-    border: black dashed 2px;
-}
-
-.analytics {
-    grid-area: analytics;
-    border: black dashed 2px;
-}
-
-.history {
-    grid-area: history;
-    border: black dashed 2px;
-}
-
-.feed {
-    display: grid;
-    grid-template:
-    "newPost" 100px
-    "timeline" 1fr /
-    1fr;
-
-    grid-gap: 2px;
-}
-
-.newPost {
-    grid-area: newPost;
-    border: black dashed 2px;
-}
-
-.feed {
-    grid-area: feed;
-    border: black dashed 2px;
-}
-
-.suggestions {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 300px 120px 300px;
 }
 
 .news {
+    display: grid;
     border: black dashed 2px;
+}
+
+.newsItem {
+    border: green dotted 2px;
+    margin: 2px;
+
 }
 
 .courses {
@@ -144,6 +217,7 @@ border: black solid 2px;
 .addToFeed {
     border: black dashed 2px;
 }
+/* SUGGESTIONS END */
 
 @media screen and (max-width: 800px) {
     .container {
