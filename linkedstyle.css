@@ -10,29 +10,21 @@ a, a:hover, a:focus, a:active {
     box-sizing: border-box;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     list-style: none;
+    background: rgb(219, 218, 218);
+
 }
 
 /* HEADER */
-.header {
-    background: rgb(187, 187, 233);
-}
 
+.header {
+    margin-bottom: 30px;
+}
 .quickBar {
     display: grid;
     grid-template-columns: 50px 1fr 400px;
-    height: 50px;
+    height: 70px;
     margin: 0px 300px;
     column-gap: 10px;
-}
-
-.logo,
-.search,
-.shortcuts {
-    border: blue dotted 2px;
-}
-
-.logo {
-  place-content: center;
 }
 
 .logo img {
@@ -42,22 +34,26 @@ height: 50px;
 .searchBar {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    margin: 5px
+    margin: 5px;
+
 }
 
 .typeHere {
-    border: black solid 2px;
+    border: black solid 1px;
     height: 40px;
     border-radius: 5px;
     display: flex;
     align-content: center;
     align-items: center;
+    background: white;
+
 }
 
 .typeHere img {
     height: 20px;
     margin-left: 5px;
     margin-right: 5px;
+    background: white;
 }
 
 .shortcuts {
@@ -73,7 +69,9 @@ height: 50px;
 .shortProfile,
 .shortWork,
 .shortPostJob {
+    background: white;
     border: green dotted 2px;
+    height: 50px;
 }
 
 /* HEADER ENDS */
@@ -83,17 +81,17 @@ height: 50px;
 Display: grid;
 Grid-template:
 "profile feed suggestions" 1fr /
-200px 1fr 200px;
+200px minmax(200px, 1fr) 200px;
 
 height: 100vh;
 grid-gap:30px;
-margin: 10px 300px;
+margin: 0px 300px;
 }
 
 /* PROFILE column */
 .profile {
     grid-area: profile;
-    background: rgb(204, 239, 135);
+    background: rgb(219, 218, 218);
 
     display: grid;
     grid-template:
@@ -107,7 +105,8 @@ margin: 10px 300px;
 
 .myItems {
     grid-area: myItems;
-    border: black dashed 2px;
+    border: grey solid 1px;
+    border-radius: 2%;
 
     display: grid;
     grid-template-rows: 2fr repeat(3, 1fr);
@@ -118,17 +117,25 @@ margin: 10px 300px;
 .premium,
 .items {
     border: green dotted 2px;
-    margin: 2px;
+    background: white;
+
 }
 
 .analytics {
     grid-area: analytics;
-    border: black dashed 2px;
+    border: grey solid 1px;
+    border-radius: 2%;
+    background: white;
+    margin-top: 10px;
 }
 
 .history {
     grid-area: history;
-    border: black dashed 2px;
+    border: grey solid 1px;
+    border-radius: 2%;
+    background: white;
+    margin-top: 10px;
+
 }
 /* PROFILE ENDS */
 
@@ -143,26 +150,29 @@ margin: 10px 300px;
     grid-gap: 30px;
 
     grid-area: feed;
-    border: black dashed 2px;
 }
 
 .newPost {
-    background: rgb(230, 134, 134);
+    background: rgb(219, 218, 218);
     display: grid;
     grid-template-rows: 3fr 2fr;
     grid-area: newPost;
-    border: black dashed 2px;
+    background: white;
+    border: grey solid 1px;
+    border-radius: 2%;
 }
 
 .postBar, .attachment {
     margin: 2px;
     padding: 2px;
-    border: blue dotted 2px;
+    background: white;
+
 }
 
 .postBar {
     display: grid;
     grid-template-columns: 60px 1fr;
+    
 }
 
 .portrait {
@@ -170,6 +180,7 @@ margin: 10px 300px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    background: white;
 }
 
 .portrait img {
@@ -182,22 +193,24 @@ margin: 10px 300px;
 .field {
     margin: 2px;
     padding: 2px;
-    border: black solid 2px;
+    border: black solid 1px;
     border-radius: 5%;
     display: flex;
     align-content: center;
     align-items: center;
+    background: white;
 }
 
 .field img {
     height: 20px;
 margin-left: 5px;
 margin-right: 5px;
+background: white;
 }
 
 .attachment {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr) 2fr;
     /* align-content: center; */
 }
 
@@ -206,16 +219,10 @@ margin-right: 5px;
 .document,
 .writeArticle {
     margin: 2px;
-    border: green dotted 2px;
-}
-
-.photo,
-.video,
-.document,
-.writeArticle {
     display: flex;
     align-content: center;
     align-items: center;
+    background: white;
 }
 
 .photo img,
@@ -225,6 +232,7 @@ margin-right: 5px;
 height: 20px;
 margin-left: 5px;
 margin-right: 5px;
+background: white;
 }
 
 
@@ -236,8 +244,12 @@ margin-right: 5px;
 }
 
 .story {
-    background: rgb(230, 134, 134);
-    border: green dotted 2px;
+    background: rgb(219, 218, 218);
+    border: grey solid 1px;
+    border-radius: 2%;
+    padding: 5px;
+    background: white;
+    margin-bottom: 5px;
 }
 
 /* FEED ENDS */
@@ -245,7 +257,8 @@ margin-right: 5px;
 /* SUGGESTIONS column */
 .suggestions {
     grid-area: suggestions;
-    background: rgb(240, 240, 140);
+    background: rgb(219, 218, 218);
+
 
     display: grid;
     grid-template-rows: 300px 120px 300px;
@@ -258,18 +271,46 @@ margin-right: 5px;
 
 .newsItem {
     border: green dotted 2px;
-    margin: 2px;
-
+    background: white;
 }
 
 .courses {
-    border: black dashed 2px;
+    border: grey solid 1px;
+    border-radius: 2%;
+    background: white;
+    margin-top: 10px;
+
 }
 
 .addToFeed {
-    border: black dashed 2px;
+    border: grey solid 1px;
+    border-radius: 2%;
+    background: white;
+    margin-top: 10px;
 }
 /* SUGGESTIONS END */
+
+@media screen and (max-width: 1400px) {
+    .quickBar,
+    .container {
+        margin: 0px 80px;
+}
+
+@media screen and (max-width: 1000px) {
+    .quickBar,
+    .container {
+        margin: 0px 60px;
+}
+
+    .container {
+        Display: grid;
+        Grid-template:
+        "profile feed suggestions" 1fr /
+        150px minmax(200px, 1fr) 150px;
+        
+        height: 100vh;
+        grid-gap:20px;
+        }
 
 @media screen and (max-width: 800px) {
     .container {
@@ -282,9 +323,22 @@ margin-right: 5px;
     .suggestions {
         display: none;
     }
-}
 
-@media screen and (max-width: 600px) {
+    .photo,
+    .video,
+    .document,
+    .writeArticle {
+    font-size: small;
+    }
+
+    .quickBar,
+    .container {
+        margin: 0px 60px;
+    }
+
+    }
+
+@media screen and (max-width: 650px) {
     .container {
         Grid-template:
         "feed" 1fr /
@@ -295,5 +349,9 @@ margin-right: 5px;
     .profile{
         display: none;
     }
+
+    .quickBar,
+    .container {
+        margin: 0px 10px;
 }
 
