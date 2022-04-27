@@ -14,37 +14,59 @@ a, a:hover, a:focus, a:active {
 .container {
 Display: grid;
 Grid-template:
-"nav server channel settings" 50px
-"nav server main main" 1fr /
+"leftBar server channel settings" 50px
+"leftBar server main main" 1fr /
 50px 100px 1fr 150px;
 
 height: 100vh;
 grid-gap:5px;
 }
 
-.nav {
-    grid-area: nav;
-    background: blue;
+/* LEFT BAR */
+.leftBar {
+    grid-area: leftBar;
+    background: rgb(138, 138, 238);
+
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
 }
+
+.home,
+.boolean,
+.codeBar,
+.add,
+.compass,
+.download {
+    border: dotted black 2px;
+    border-radius: 50%;
+    margin: 2px;
+    height: 46px;
+}
+
+.home {
+    margin-bottom: 10px;
+}
+
+/* LEFT BAR ENDS */
 
 .server {
     grid-area: server;
-    background: red;
+    background: rgb(234, 148, 148);
 }
 
 .channel {
     grid-area: channel;
-    background: yellow;
+    background: rgb(237, 237, 140);
 }
 
 .settings {
     grid-area: settings;
-    background: orange;
+    background: rgb(241, 207, 144);
 }
 
 .main {
     grid-area: main;
-    background:purple;
+    background:rgb(232, 152, 232);
 }
 
 @media screen and (max-width: 800px) {

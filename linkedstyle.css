@@ -9,6 +9,7 @@ a, a:hover, a:focus, a:active {
     margin:0;
     box-sizing: border-box;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    list-style: none;
 }
 
 /* HEADER */
@@ -20,7 +21,7 @@ a, a:hover, a:focus, a:active {
     display: grid;
     grid-template-columns: 50px 1fr 400px;
     height: 50px;
-    margin: 0px 100px;
+    margin: 0px 300px;
     column-gap: 10px;
 }
 
@@ -28,6 +29,14 @@ a, a:hover, a:focus, a:active {
 .search,
 .shortcuts {
     border: blue dotted 2px;
+}
+
+.logo {
+  place-content: center;
+}
+
+.logo img {
+height: 50px;
 }
 
 .searchBar {
@@ -40,6 +49,15 @@ a, a:hover, a:focus, a:active {
     border: black solid 2px;
     height: 40px;
     border-radius: 5px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.typeHere img {
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .shortcuts {
@@ -60,7 +78,7 @@ a, a:hover, a:focus, a:active {
 
 /* HEADER ENDS */
 
-/* GRID 3x1 */
+
 .container {
 Display: grid;
 Grid-template:
@@ -68,11 +86,11 @@ Grid-template:
 200px 1fr 200px;
 
 height: 100vh;
-grid-gap:5px;
-margin: 10px 100px;
+grid-gap:30px;
+margin: 10px 300px;
 }
 
-/* PROFILE */
+/* PROFILE column */
 .profile {
     grid-area: profile;
     background: rgb(204, 239, 135);
@@ -87,7 +105,6 @@ margin: 10px 100px;
     grid-gap: 2px;
 }
 
-   
 .myItems {
     grid-area: myItems;
     border: black dashed 2px;
@@ -115,22 +132,22 @@ margin: 10px 100px;
 }
 /* PROFILE ENDS */
 
-/* FEED */
+/* FEED column*/
 .feed {
-    background: rgb(230, 134, 134);
     display: grid;
     grid-template:
-    "newPost" 100px
+    "newPost" 120px
     "timeline" 1fr /
     1fr;
 
-    grid-gap: 2px;
+    grid-gap: 30px;
 
     grid-area: feed;
     border: black dashed 2px;
 }
 
 .newPost {
+    background: rgb(230, 134, 134);
     display: grid;
     grid-template-rows: 3fr 2fr;
     grid-area: newPost;
@@ -145,26 +162,43 @@ margin: 10px 100px;
 
 .postBar {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 60px 1fr;
 }
 
 .portrait {
     margin: 2px;
-    padding: 2px;
-    border: green dotted 2px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.portrait img {
+    height: 50px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
 .field {
     margin: 2px;
     padding: 2px;
-    border: green dotted 2px;
+    border: black solid 2px;
     border-radius: 5%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.field img {
+    height: 20px;
+margin-left: 5px;
+margin-right: 5px;
 }
 
 .attachment {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    /* align-content: center; */
 }
 
 .photo,
@@ -172,9 +206,27 @@ margin: 10px 100px;
 .document,
 .writeArticle {
     margin: 2px;
-    padding: 2px;
     border: green dotted 2px;
 }
+
+.photo,
+.video,
+.document,
+.writeArticle {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.photo img,
+.video img,
+.document img,
+.writeArticle img {
+height: 20px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
 
 .timeline {
     display: grid;
@@ -184,13 +236,13 @@ margin: 10px 100px;
 }
 
 .story {
+    background: rgb(230, 134, 134);
     border: green dotted 2px;
-
 }
 
 /* FEED ENDS */
 
-/* SUGGESTIONS */
+/* SUGGESTIONS column */
 .suggestions {
     grid-area: suggestions;
     background: rgb(240, 240, 140);
